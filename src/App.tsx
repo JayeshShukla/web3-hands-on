@@ -1,10 +1,12 @@
 import React from "react";
-import Wallet from "./components/wallet";
+import Header from "./components/header";
+import Body from "./components/body";
 
 function App() {
   return (
-    <div className="App">
-      <Wallet />
+    <div className="App relative">
+      <Header />
+      <Body />
     </div>
   );
 }
