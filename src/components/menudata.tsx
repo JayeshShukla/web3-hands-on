@@ -3,31 +3,42 @@ export const menulist = [
     title: "Get Your Public Key",
     description:
       "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
-  },
-
-  {
-    title: "Get Your Public Key",
-    description:
-      "Dont have a Wallet/Public Key, worry not we have got you covered.",
+    to: "/create-wallet",
   },
   {
-    title: "Get Your Public Key",
+    title: "Drop a SOL to Your Wallet",
     description:
-      "Dont have a Wallet/Public Key, worry not we have got you covered.",
+      "Generate a <strong>SOL</strong><br/> We do this because in any network of solana in order to execute some actions we need to give some <strong>GAS FEE</strong>.",
+    to: "/drop-a-sol",
   },
   {
     title: "Get Your Public Key",
     description:
-      "Dont have a Wallet/Public Key, worry not we have got you covered.",
+      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
+    to: "/create-wallet",
   },
   {
     title: "Get Your Public Key",
     description:
-      "Dont have a Wallet/Public Key, worry not we have got you covered.",
+      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
+    to: "/create-wallet",
   },
   {
     title: "Get Your Public Key",
     description:
-      "Dont have a Wallet/Public Key, worry not we have got you covered.",
+      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
+    to: "/create-wallet",
+  },
+  {
+    title: "Get Your Public Key",
+    description:
+      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
+    to: "/create-wallet",
+  },
+  {
+    title: "Get Your Public Key",
+    description:
+      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
+    to: "/create-wallet",
   },
 ];

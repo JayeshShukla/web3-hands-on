@@ -17,7 +17,6 @@ const Wallet = () => {
       .map((value) => Number(value));
 
     const secret = JSON.stringify(secret_array);
-    console.log(secret);
     saveSecret(secret);
   };
 
