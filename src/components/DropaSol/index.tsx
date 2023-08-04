@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { LAMPORTS_PER_SOL, Connection, Keypair } from "@solana/web3.js";
 import { PublicKey } from "@solana/web3.js";
-// import { PublicKey } from "@metaplex-foundation/js";
-import { stringify } from "querystring";
 
 function DropaSol() {
   const [publicKey, setPublicKey] = useState<string>();
@@ -34,7 +32,18 @@ function DropaSol() {
     }
   };
 
-  const handleBalance = () => {};
+  const checkBalance = async () => {
+    const balanceSignature =
+      publicKey && solanaConnection.getBalance(new PublicKey(publicKey));
+    try {
+      const balance = await balanceSignature;
+      setBalance(
+        `${balance?.toString().slice(0, 1)}.${balance?.toString().slice(1)}`
+      );
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="w-100 pa5">
@@ -56,11 +65,19 @@ function DropaSol() {
         </button>
         <button
           className="pointer bg-black white pa3 bn br3"
-          onClick={() => handleBalance()}
+          onClick={() => checkBalance()}
           disabled={publicKey ? false : true}
         >
           Check Balance
         </button>
+      </div>
+      <div className="w-100 flex justify-center mt5 f5 fw6">
+        {balance && (
+          <div>
+            The amount in your Wallet is :{" "}
+            <span className="red">{balance}</span> SOL
+          </div>
+        )}
       </div>
     </div>
   );
