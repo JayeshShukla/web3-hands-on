@@ -20,7 +20,7 @@ function MintToken() {
       );
       const mint = await createMint(
         solanaConnection,
-        userWallet, // payer: Signer
+        userWallet,
         userWallet.publicKey,
         userWallet.publicKey,
         9
@@ -40,6 +40,7 @@ function MintToken() {
           className="w-100 h3 bn br3 f4 mt3"
           placeholder="Your Wallet Private Address..."
           onChange={(e) => setPublicKey(e.target.value)}
+          type="password"
         />
         <div className="mt2 red fw5 f5">
           (*this address resembles the owner of the currency aka{" "}
