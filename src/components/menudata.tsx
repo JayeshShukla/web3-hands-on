@@ -12,10 +12,10 @@ export const menulist = [
     to: "/drop-a-sol",
   },
   {
-    title: "Get Your Public Key",
+    title: "Lets Mint/Develop Your Currency",
     description:
-      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
-    to: "/create-wallet",
+      "This Section Creates Your Currency Known as : <strong>MINT ADDRESS</strong>.",
+    to: "/mint-token",
   },
   {
     title: "Get Your Public Key",

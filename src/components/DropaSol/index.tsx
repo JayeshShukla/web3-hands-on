@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { LAMPORTS_PER_SOL, Connection, Keypair } from "@solana/web3.js";
-import { PublicKey } from "@solana/web3.js";
+import { LAMPORTS_PER_SOL, Connection, PublicKey } from "@solana/web3.js";
 
 function DropaSol() {
   const [publicKey, setPublicKey] = useState<string>();
