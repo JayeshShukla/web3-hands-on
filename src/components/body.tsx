@@ -4,6 +4,7 @@ import Home from "./Home";
 import NewWallet from "./NewWallet";
 import DropaSol from "./DropaSol";
 import MintToken from "./MintToken";
+import TokenAccount from "./TokenAccount";
 
 const Body = () => {
   return (
@@ -13,6 +14,7 @@ const Body = () => {
         <Route path="/create-wallet" element={<NewWallet />}></Route>
         <Route path="/drop-a-sol" element={<DropaSol />}></Route>
         <Route path="/mint-token" element={<MintToken />}></Route>
+        <Route path="/token-account" element={<TokenAccount />}></Route>
       </Routes>
     </div>
   );

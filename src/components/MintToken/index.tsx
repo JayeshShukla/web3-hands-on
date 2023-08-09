@@ -4,19 +4,19 @@ import { Connection, Keypair } from "@solana/web3.js";
 import { createMint } from "@solana/spl-token";
 
 import * as buffer from "buffer";
-window.Buffer = buffer.Buffer;
 
 function MintToken() {
-  const [publicKey, setPublicKey] = useState<string>();
+  window.Buffer = buffer.Buffer;
+  const [privateKey, setprivateKey] = useState<string>();
   const [mintAddress, setMintAddress] = useState<string>();
 
   const dev_net_endpoint = "https://api.devnet.solana.com";
   const solanaConnection = new Connection(dev_net_endpoint);
 
   const createToken = async () => {
-    if (publicKey) {
+    if (privateKey) {
       const userWallet = Keypair.fromSecretKey(
-        new Uint8Array(JSON.parse(publicKey))
+        new Uint8Array(JSON.parse(privateKey))
       );
       const mint = await createMint(
         solanaConnection,
@@ -39,7 +39,7 @@ function MintToken() {
         <input
           className="w-100 h3 bn br3 f4 mt3"
           placeholder="Your Wallet Private Address..."
-          onChange={(e) => setPublicKey(e.target.value)}
+          onChange={(e) => setprivateKey(e.target.value)}
           type="password"
         />
         <div className="mt2 red fw5 f5">
@@ -60,7 +60,7 @@ function MintToken() {
           <button
             className="pointer bg-black white pa3 bn br3 mt5"
             onClick={() => createToken()}
-            disabled={publicKey ? false : true}
+            disabled={privateKey ? false : true}
           >
             Create Token
           </button>

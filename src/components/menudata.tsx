@@ -18,10 +18,10 @@ export const menulist = [
     to: "/mint-token",
   },
   {
-    title: "Get Your Public Key",
+    title: "Create a Bank Account",
     description:
-      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
-    to: "/create-wallet",
+      "Generate a <strong>Token Account</strong><br/> to store the currency created, as 1 account 1 currency policy.",
+    to: "/token-account",
   },
   {
     title: "Get Your Public Key",
