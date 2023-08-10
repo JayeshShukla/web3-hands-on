@@ -15,19 +15,19 @@ export const menulist = [
     title: "Lets Mint/Develop Your Currency",
     description:
       "This Section Creates Your Currency Known as : <strong>MINT ADDRESS</strong>.",
-    to: "/mint-token",
+    to: "/mint-address",
   },
   {
-    title: "Create a Bank Account",
+    title: "Create an Associated Token Account",
     description:
       "Generate a <strong>Token Account</strong><br/> to store the currency created, as 1 account 1 currency policy.",
     to: "/token-account",
   },
   {
-    title: "Get Your Public Key",
+    title: "Mint some Token to your Token Account.",
     description:
-      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
-    to: "/create-wallet",
+      "Provide the amount of token and witness them in your<strong>Token Account</strong>.",
+    to: "/mint-token",
   },
   {
     title: "Get Your Public Key",

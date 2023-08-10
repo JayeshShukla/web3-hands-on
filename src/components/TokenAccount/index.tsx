@@ -31,10 +31,17 @@ function TokenAccount() {
         setTokenAccount(createdToken.toString());
       } catch (error) {
         alert("Your Associated Token is already there, cannot create new.");
-        console.error("Error creating associated token account:", error);
+        const foundToken = await getOrCreateAssociatedTokenAccount(
+          solanaConnection,
+          userWallet,
+          new PublicKey(tokenAddress),
+          userWallet.publicKey
+        );
+        setTokenAccount(foundToken.address.toString());
       }
     }
   };
+
   return (
     <div className="w-100">
       <div className="w-50 center pt5">
@@ -57,17 +64,17 @@ function TokenAccount() {
         />
         <div className="w-100 flex justify-center">
           <button
-            className="pointer bg-black white pa3 bn br3 mt5"
+            className="pointer bg-black white pa3 bn br3 mt3"
             onClick={() => createToken()}
             disabled={tokenAddress && privateKey ? false : true}
           >
-            Create Token Account
+            Create/Find Token Account
           </button>
         </div>
         {tokenAccount && (
-          <div>
-            Your Associated Token Account is created :{" "}
-            <strong>{tokenAccount}</strong>
+          <div className="mt2 flex nowrap mt3">
+            Your Associated Token Account Address is :
+            <strong className="red">{tokenAccount}</strong>
           </div>
         )}
       </div>
