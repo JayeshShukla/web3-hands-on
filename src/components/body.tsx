@@ -6,6 +6,7 @@ import DropaSol from "./DropaSol";
 import MintAddress from "./MintAddress";
 import TokenAccount from "./TokenAccount";
 import MintToken from "./MintToken";
+import SendToken from "./SendToken";
 
 const Body = () => {
   return (
@@ -17,6 +18,7 @@ const Body = () => {
         <Route path="/mint-address" element={<MintAddress />}></Route>
         <Route path="/token-account" element={<TokenAccount />}></Route>
         <Route path="/mint-token" element={<MintToken />}></Route>
+        <Route path="/send-token" element={<SendToken />}></Route>
       </Routes>
     </div>
   );
