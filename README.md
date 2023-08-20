@@ -14,6 +14,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `Issues Resolver for webpack 5 or greater`
+
+https://web3auth.io/docs/troubleshooting/webpack-issues#react-create-react-app
+
+npm install -D assert util crypto-browserify @esbuild-plugins/node-globals-polyfill rollup-plugin-node-polyfills
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

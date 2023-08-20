@@ -7,6 +7,7 @@ import MintAddress from "./MintAddress";
 import TokenAccount from "./TokenAccount";
 import MintToken from "./MintToken";
 import SendToken from "./SendToken";
+import Metadata from "./Metadata";
 
 const Body = () => {
   return (
@@ -19,6 +20,7 @@ const Body = () => {
         <Route path="/token-account" element={<TokenAccount />}></Route>
         <Route path="/mint-token" element={<MintToken />}></Route>
         <Route path="/send-token" element={<SendToken />}></Route>
+        <Route path="/meta-data" element={<Metadata />}></Route>
       </Routes>
     </div>
   );

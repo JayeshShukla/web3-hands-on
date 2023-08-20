@@ -35,9 +35,9 @@ export const menulist = [
     to: "/send-token",
   },
   {
-    title: "Get Your Public Key",
+    title: "Attach Meta Data To Your Token",
     description:
-      "Generate a <strong>Wallet/Public Key</strong><br/> It's Just One Click Away.",
-    to: "/create-wallet",
+      "Have a Token but its un named?<br/><strong>Attach the METADATA</strong>.",
+    to: "/meta-data",
   },
 ];
